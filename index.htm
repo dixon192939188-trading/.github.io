@@ -32,17 +32,6 @@
 
     <script>
         function updateTime() {
-            const now = new Date();
-            // 格式化时间为 HH:MM:SS
-            const timeString = now.toLocaleTimeString('zh-CN', { hour12: false });
-
-            const datePart = now.toLocaleDateString('zh-CN');
-            const timePart = now.toLocaleTimeString('zh-CN', {
-              hour: '2-digit',
-              minute: '2-digit',
-              second: '2-digit',
-              hour12: false
-            });
 
             const date = new Date();
             
@@ -56,11 +45,7 @@
               hour12: false
             });
             
-            console.log(format);
-            // 2026/03/26 09:00:00
-                        
-            
-            document.getElementById('clock').textContent = format+'<br>';
+            document.getElementById('clock').textContent = format;
         }
 
         // 立即调用一次以避免延迟
