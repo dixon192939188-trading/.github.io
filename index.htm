@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>当前时间</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #clock {
+            font-size: 4em;
+            font-weight: bold;
+            color: #333;
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 用于显示时间的容器 -->
+    <div id="clock">加载中...</div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            // 格式化时间为 HH:MM:SS
+            const timeString = now.toLocaleTimeString('zh-CN', { hour12: false });
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // 立即调用一次以避免延迟
+        updateTime();
+        // 每秒 (1000毫秒) 更新一次
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
