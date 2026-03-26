@@ -36,8 +36,8 @@
             // 格式化时间为 HH:MM:SS
             const timeString = now.toLocaleTimeString('zh-CN', { hour12: false });
 
-            const datePart = date.toLocaleDateString('zh-CN');
-            const timePart = date.toLocaleTimeString('zh-CN', {
+            const datePart = now.toLocaleDateString('zh-CN');
+            const timePart = now.toLocaleTimeString('zh-CN', {
               hour: '2-digit',
               minute: '2-digit',
               second: '2-digit',
