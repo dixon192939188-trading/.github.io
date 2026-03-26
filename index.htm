@@ -32,9 +32,7 @@
 
     <script>
         function updateTime() {
-
-            const date = new Date();
-            
+            const date = new Date();            
             const format = date.toLocaleString('zh-CN', {
               year: 'numeric',
               month: '2-digit',
@@ -43,8 +41,7 @@
               minute: '2-digit',
               second: '2-digit',
               hour12: false
-            });
-            
+            });            
             document.getElementById('clock').textContent = format;
         }
 
